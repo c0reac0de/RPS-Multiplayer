@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Rock, Paper, Scisccors</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Plaster" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    h1{
+        font-family: 'Plaster', cursive;
+    }
+   
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="jumbotron">
+  <div class="container text-center">
+        <h1>Rock || Paper || Scissors</h1>
+<p>Let's Play!</p>  
+  </div>
+</div>
+
+
+<div class="container">    
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-info">
+        <div class="panel-heading"></div>
+        <div class="panel-body">
+            <button id="rock" onclick="rpsGame(this)">
+                    Rock
+            </button>
+            <img src="images/landscape-749680_1280.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">waiting for all players to begin..</div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-warning">
+        <div class="panel-heading">Players </div>
+        <div class="panel-body">
+            <img src="images/fingers-149295_1280.png" class="img-responsive" style="width:100%"  alt="Image"></div>
+        <div class="panel-footer">Player 1 and 2</div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="box player 1">
+            <div class="waiting">
+                <div class="score score 1">
+                    <div class="choices 1"></div>
+                </div>
+            </div>
+        </div>
+        <div class="box player 2">
+                <div class="waiting">
+                    <div class="score score 2">
+                        <div class="choices 2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="col-sm-4">
+        <div class="panel panel-success">
+<div class="panel-heading">Scoreboard</div>
+<div class="panel-body">
+<img src="images/abstract-3288639_1920.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+<div class="score results"></div>
+
+    
+
+        </div>
+    </div> 
+
+</div>
+</div>
+<br>
+<br>
+<!-- Firebase App is always required and must be first -->
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
+
+<!-- Add additional services you want to use -->
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-database.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDOPN4FGT1iYat1tHpp55PEUQcGVVCTCBs",
+    authDomain: "pierre-papier-ciseaux.firebaseapp.com",
+    databaseURL: "https://pierre-papier-ciseaux.firebaseio.com",
+    projectId: "pierre-papier-ciseaux",
+    storageBucket: "pierre-papier-ciseaux.appspot.com",
+    messagingSenderId: "713886370960"
+  };
+  firebase.initializeApp(config);
+</script>
+<br>
+
+<footer class="container-fluid text-center">
+  <p>Game on!</p>  
+</footer>
+	<!-- Custom JavaScript -->
+    <script src="js/logic.js"></script>
+    
+</body>
+</html>
